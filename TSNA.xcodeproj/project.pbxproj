@@ -7,19 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23078CE2267D023D0001730B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CE1267D023D0001730B /* ImageService.swift */; };
+		23078CE4267D27F80001730B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CE3267D27F80001730B /* Report.swift */; };
+		23078CE9267D2B450001730B /* BlogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CE8267D2B450001730B /* BlogRow.swift */; };
+		23078CEB267D2D3F0001730B /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEA267D2D3F0001730B /* ReportsView.swift */; };
+		23078CED267D31AE0001730B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEC267D31AE0001730B /* DetailView.swift */; };
+		23078CEF267D31FA0001730B /* SpaceFlightNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEE267D31FA0001730B /* SpaceFlightNews.swift */; };
 		23B40DD4267BF0AE00341BBB /* TSNAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DD3267BF0AE00341BBB /* TSNAApp.swift */; };
 		23B40DD6267BF0AE00341BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DD5267BF0AE00341BBB /* ContentView.swift */; };
 		23B40DD8267BF0B000341BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B40DD7267BF0B000341BBB /* Assets.xcassets */; };
 		23B40DDB267BF0B000341BBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B40DDA267BF0B000341BBB /* Preview Assets.xcassets */; };
+		23B40DE3267BF12B00341BBB /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DE2267BF12B00341BBB /* AppService.swift */; };
+		23B40DE5267BFE2A00341BBB /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DE4267BFE2A00341BBB /* Article.swift */; };
+		23B40DE7267C009B00341BBB /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DE6267C009B00341BBB /* Launch.swift */; };
+		23B40DE9267C190400341BBB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DE8267C190400341BBB /* APIService.swift */; };
+		23B40DEB267C19A000341BBB /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DEA267C19A000341BBB /* Blog.swift */; };
+		23B40DF5267C24C300341BBB /* TSNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DF4267C24C300341BBB /* TSNATests.swift */; };
+		23B40DFD267C261500341BBB /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DFC267C261500341BBB /* APIServiceTests.swift */; };
+		23B40E00267C425600341BBB /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DFF267C425600341BBB /* ArticleListView.swift */; };
+		23B40E07267C43F900341BBB /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40E06267C43F900341BBB /* ArticleRow.swift */; };
+		23B40E09267C46DC00341BBB /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40E08267C46DC00341BBB /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		23B40DF7267C24C300341BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23B40DC8267BF0AE00341BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23B40DCF267BF0AE00341BBB;
+			remoteInfo = TSNA;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		23078CE1267D023D0001730B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageService.swift; path = ../../../../../../ImageService.swift; sourceTree = "<group>"; };
+		23078CE3267D27F80001730B /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		23078CE8267D2B450001730B /* BlogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogRow.swift; sourceTree = "<group>"; };
+		23078CEA267D2D3F0001730B /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		23078CEC267D31AE0001730B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		23078CEE267D31FA0001730B /* SpaceFlightNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFlightNews.swift; sourceTree = "<group>"; };
 		23B40DD0267BF0AE00341BBB /* TSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B40DD3267BF0AE00341BBB /* TSNAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSNAApp.swift; sourceTree = "<group>"; };
 		23B40DD5267BF0AE00341BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B40DD7267BF0B000341BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23B40DDA267BF0B000341BBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23B40DDC267BF0B000341BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B40DE2267BF12B00341BBB /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		23B40DE4267BFE2A00341BBB /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		23B40DE6267C009B00341BBB /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		23B40DE8267C190400341BBB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		23B40DEA267C19A000341BBB /* Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
+		23B40DF2267C24C300341BBB /* TSNATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSNATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B40DF4267C24C300341BBB /* TSNATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSNATests.swift; sourceTree = "<group>"; };
+		23B40DF6267C24C300341BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B40DFC267C261500341BBB /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		23B40DFF267C425600341BBB /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		23B40E06267C43F900341BBB /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
+		23B40E08267C46DC00341BBB /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,14 +74,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23B40DEF267C24C300341BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23078CE5267D2B1A0001730B /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				23B40E06267C43F900341BBB /* ArticleRow.swift */,
+				23B40E08267C46DC00341BBB /* ArticleCell.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		23078CE6267D2B230001730B /* Blogs */ = {
+			isa = PBXGroup;
+			children = (
+				23078CE8267D2B450001730B /* BlogRow.swift */,
+			);
+			path = Blogs;
+			sourceTree = "<group>";
+		};
+		23078CE7267D2B280001730B /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				23078CEA267D2D3F0001730B /* ReportsView.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
 		23B40DC7267BF0AE00341BBB = {
 			isa = PBXGroup;
 			children = (
 				23B40DD2267BF0AE00341BBB /* TSNA */,
-				23B40DD1267BF0AE00341BBB /* Products */,
+				23B40DF3267C24C300341BBB /* TSNATests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,15 +121,21 @@
 			isa = PBXGroup;
 			children = (
 				23B40DD0267BF0AE00341BBB /* TSNA.app */,
+				23B40DF2267C24C300341BBB /* TSNATests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		23B40DD2267BF0AE00341BBB /* TSNA */ = {
 			isa = PBXGroup;
 			children = (
+				23B40E01267C426100341BBB /* View */,
+				23B40DFE267C422D00341BBB /* ViewModel */,
 				23B40DD3267BF0AE00341BBB /* TSNAApp.swift */,
-				23B40DD5267BF0AE00341BBB /* ContentView.swift */,
+				23B40DED267C1A6100341BBB /* Service */,
+				23B40DEC267C1A5300341BBB /* Model */,
+				23B40DD1267BF0AE00341BBB /* Products */,
 				23B40DD7267BF0B000341BBB /* Assets.xcassets */,
 				23B40DDC267BF0B000341BBB /* Info.plist */,
 				23B40DD9267BF0B000341BBB /* Preview Content */,
@@ -67,6 +149,58 @@
 				23B40DDA267BF0B000341BBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23B40DEC267C1A5300341BBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23B40DE6267C009B00341BBB /* Launch.swift */,
+				23B40DEA267C19A000341BBB /* Blog.swift */,
+				23B40DE4267BFE2A00341BBB /* Article.swift */,
+				23078CE3267D27F80001730B /* Report.swift */,
+				23078CEE267D31FA0001730B /* SpaceFlightNews.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23B40DED267C1A6100341BBB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				23B40DE2267BF12B00341BBB /* AppService.swift */,
+				23B40DE8267C190400341BBB /* APIService.swift */,
+				23078CE1267D023D0001730B /* ImageService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		23B40DF3267C24C300341BBB /* TSNATests */ = {
+			isa = PBXGroup;
+			children = (
+				23B40DF4267C24C300341BBB /* TSNATests.swift */,
+				23B40DF6267C24C300341BBB /* Info.plist */,
+				23B40DFC267C261500341BBB /* APIServiceTests.swift */,
+			);
+			path = TSNATests;
+			sourceTree = "<group>";
+		};
+		23B40DFE267C422D00341BBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23B40DD5267BF0AE00341BBB /* ContentView.swift */,
+				23B40DFF267C425600341BBB /* ArticleListView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		23B40E01267C426100341BBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23078CE7267D2B280001730B /* Reports */,
+				23078CE6267D2B230001730B /* Blogs */,
+				23078CE5267D2B1A0001730B /* Articles */,
+				23078CEC267D31AE0001730B /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +223,24 @@
 			productReference = 23B40DD0267BF0AE00341BBB /* TSNA.app */;
 			productType = "com.apple.product-type.application";
 		};
+		23B40DF1267C24C300341BBB /* TSNATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B40DF9267C24C300341BBB /* Build configuration list for PBXNativeTarget "TSNATests" */;
+			buildPhases = (
+				23B40DEE267C24C300341BBB /* Sources */,
+				23B40DEF267C24C300341BBB /* Frameworks */,
+				23B40DF0267C24C300341BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23B40DF8267C24C300341BBB /* PBXTargetDependency */,
+			);
+			name = TSNATests;
+			productName = TSNATests;
+			productReference = 23B40DF2267C24C300341BBB /* TSNATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +252,10 @@
 				TargetAttributes = {
 					23B40DCF267BF0AE00341BBB = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					23B40DF1267C24C300341BBB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 23B40DCF267BF0AE00341BBB;
 					};
 				};
 			};
@@ -117,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				23B40DCF267BF0AE00341BBB /* TSNA */,
+				23B40DF1267C24C300341BBB /* TSNATests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +288,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23B40DF0267C24C300341BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,12 +302,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B40DE5267BFE2A00341BBB /* Article.swift in Sources */,
+				23B40DEB267C19A000341BBB /* Blog.swift in Sources */,
 				23B40DD6267BF0AE00341BBB /* ContentView.swift in Sources */,
+				23B40E00267C425600341BBB /* ArticleListView.swift in Sources */,
+				23078CE9267D2B450001730B /* BlogRow.swift in Sources */,
+				23B40DE3267BF12B00341BBB /* AppService.swift in Sources */,
+				23B40DE7267C009B00341BBB /* Launch.swift in Sources */,
+				23078CEF267D31FA0001730B /* SpaceFlightNews.swift in Sources */,
+				23B40DE9267C190400341BBB /* APIService.swift in Sources */,
 				23B40DD4267BF0AE00341BBB /* TSNAApp.swift in Sources */,
+				23078CE2267D023D0001730B /* ImageService.swift in Sources */,
+				23078CEB267D2D3F0001730B /* ReportsView.swift in Sources */,
+				23B40E07267C43F900341BBB /* ArticleRow.swift in Sources */,
+				23B40E09267C46DC00341BBB /* ArticleCell.swift in Sources */,
+				23078CED267D31AE0001730B /* DetailView.swift in Sources */,
+				23078CE4267D27F80001730B /* Report.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B40DEE267C24C300341BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B40DFD267C261500341BBB /* APIServiceTests.swift in Sources */,
+				23B40DF5267C24C300341BBB /* TSNATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23B40DF8267C24C300341BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23B40DCF267BF0AE00341BBB /* TSNA */;
+			targetProxy = 23B40DF7267C24C300341BBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		23B40DDD267BF0B000341BBB /* Debug */ = {
@@ -306,6 +501,46 @@
 			};
 			name = Release;
 		};
+		23B40DFA267C24C300341BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2MH5FWQJN;
+				INFOPLIST_FILE = TSNATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sim.TSNATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSNA.app/TSNA";
+			};
+			name = Debug;
+		};
+		23B40DFB267C24C300341BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2MH5FWQJN;
+				INFOPLIST_FILE = TSNATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sim.TSNATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSNA.app/TSNA";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +558,15 @@
 			buildConfigurations = (
 				23B40DE0267BF0B000341BBB /* Debug */,
 				23B40DE1267BF0B000341BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23B40DF9267C24C300341BBB /* Build configuration list for PBXNativeTarget "TSNATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B40DFA267C24C300341BBB /* Debug */,
+				23B40DFB267C24C300341BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
