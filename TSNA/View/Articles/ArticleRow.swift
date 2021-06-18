@@ -17,7 +17,16 @@ struct ArticleRow: View {
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(articles, id: \.self) { article in
-                        ArticleCell(article: article)
+                        NavigationLink(
+                            destination: DetailView(title: article.title,
+                                                    summary: article.summary,
+                                                    image: article.imageUrl,
+                                                    url: article.url,
+                                                    site: article.newsSite,
+                                                    publishedTime: article.publishedAt),
+                            label: {
+                                ArticleCell(article: article)
+                            })
                     }
                 }
             })

@@ -13,6 +13,8 @@
 		23078CEB267D2D3F0001730B /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEA267D2D3F0001730B /* ReportsView.swift */; };
 		23078CED267D31AE0001730B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEC267D31AE0001730B /* DetailView.swift */; };
 		23078CEF267D31FA0001730B /* SpaceFlightNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CEE267D31FA0001730B /* SpaceFlightNews.swift */; };
+		23078CF4267D517A0001730B /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CF3267D517A0001730B /* DateUtil.swift */; };
+		23078CF6267D55980001730B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23078CF5267D55980001730B /* WebView.swift */; };
 		23B40DD4267BF0AE00341BBB /* TSNAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DD3267BF0AE00341BBB /* TSNAApp.swift */; };
 		23B40DD6267BF0AE00341BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B40DD5267BF0AE00341BBB /* ContentView.swift */; };
 		23B40DD8267BF0B000341BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B40DD7267BF0B000341BBB /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		23078CEA267D2D3F0001730B /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
 		23078CEC267D31AE0001730B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		23078CEE267D31FA0001730B /* SpaceFlightNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFlightNews.swift; sourceTree = "<group>"; };
+		23078CF3267D517A0001730B /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		23078CF5267D55980001730B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		23B40DD0267BF0AE00341BBB /* TSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B40DD3267BF0AE00341BBB /* TSNAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSNAApp.swift; sourceTree = "<group>"; };
 		23B40DD5267BF0AE00341BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,14 @@
 			path = Reports;
 			sourceTree = "<group>";
 		};
+		23078CF2267D51530001730B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				23078CF3267D517A0001730B /* DateUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		23B40DC7267BF0AE00341BBB = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		23B40DD2267BF0AE00341BBB /* TSNA */ = {
 			isa = PBXGroup;
 			children = (
+				23078CF2267D51530001730B /* Utilities */,
 				23B40E01267C426100341BBB /* View */,
 				23B40DFE267C422D00341BBB /* ViewModel */,
 				23B40DD3267BF0AE00341BBB /* TSNAApp.swift */,
@@ -199,6 +212,7 @@
 				23078CE6267D2B230001730B /* Blogs */,
 				23078CE5267D2B1A0001730B /* Articles */,
 				23078CEC267D31AE0001730B /* DetailView.swift */,
+				23078CF5267D55980001730B /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +321,7 @@
 				23B40DD6267BF0AE00341BBB /* ContentView.swift in Sources */,
 				23B40E00267C425600341BBB /* ArticleListView.swift in Sources */,
 				23078CE9267D2B450001730B /* BlogRow.swift in Sources */,
+				23078CF4267D517A0001730B /* DateUtil.swift in Sources */,
 				23B40DE3267BF12B00341BBB /* AppService.swift in Sources */,
 				23B40DE7267C009B00341BBB /* Launch.swift in Sources */,
 				23078CEF267D31FA0001730B /* SpaceFlightNews.swift in Sources */,
@@ -316,6 +331,7 @@
 				23078CEB267D2D3F0001730B /* ReportsView.swift in Sources */,
 				23B40E07267C43F900341BBB /* ArticleRow.swift in Sources */,
 				23B40E09267C46DC00341BBB /* ArticleCell.swift in Sources */,
+				23078CF6267D55980001730B /* WebView.swift in Sources */,
 				23078CED267D31AE0001730B /* DetailView.swift in Sources */,
 				23078CE4267D27F80001730B /* Report.swift in Sources */,
 			);
