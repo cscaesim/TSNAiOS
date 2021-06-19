@@ -14,7 +14,7 @@ struct LoadingScreen: View {
         ZStack {
             Color(.systemBackground)
                 .ignoresSafeArea()
-                .opacity(0.9)
+                .opacity(0.4)
             Circle()
                 .stroke(Color(.systemGray5), lineWidth: 14)
                 .frame(width: 100, height: 100)

@@ -18,12 +18,22 @@ struct DashboardView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                VStack {
-                    ArticleRow(articles: viewModel.articles)
-                    BlogRow(blogs: viewModel.blogs)
-                    ReportRow(reports: viewModel.reports)
+                Color(.systemBackground)
+//                VStack {
+//                    ArticleRow(articles: viewModel.articles)
+//                    BlogRow(blogs: viewModel.blogs)
+//                    ReportRow(reports: viewModel.reports)
+//                }
+                
+                List {
+                    ForEach(viewModel.dataSet.keys.sorted(), id: \.self) { key in
+                        ArticleRow(articles: viewModel.dataSet[key]!, title: key)
+                    }
                 }
-                .navigationTitle("Featured")
+                .listStyle(PlainListStyle())
+                .frame(maxWidth: .infinity)
+                .navigationTitle("News Dashboard")
+                .redacted(reason: viewModel.isLoading ? .placeholder : [])
                 
                 if (viewModel.isLoading) {
                     LoadingScreen()
@@ -46,9 +56,10 @@ extension DashboardView {
         let name = "Hello, Space News!"
         @Published var isLoading = false
         @Published var featuredArticle: Article!
+        @Published var dataSet = [String: [Article]]()
         @Published var articles = [Article]()
-        @Published var blogs = [Blog]()
-        @Published var reports = [Report]()
+        @Published var blogs = [Article]()
+        @Published var reports = [Article]()
         
         @State var selectedOption = 0
         
@@ -64,7 +75,7 @@ extension DashboardView {
             getBlogs()
             getReports()
     
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.isLoading = false
             }
         }
@@ -73,6 +84,9 @@ extension DashboardView {
             dataService.getNews(limit: 10) { result in
                 DispatchQueue.main.async {
                     self.articles = result
+//                    self.dataSet.append(self.articles)
+//                    self.dataSet = ["Articles": self.articles]
+                    self.dataSet["Articles"] = self.articles
                 }
             }
         }
@@ -81,6 +95,9 @@ extension DashboardView {
             dataService.getBlogs(limit: 10) { result in
                 DispatchQueue.main.async {
                     self.blogs = result
+//                    self.dataSet.append(self.blogs)
+//                    self.dataSet = ["Blogs": self.blogs]
+                    self.dataSet["Blogs"] = self.blogs
                 }
             }
         }
@@ -89,6 +106,9 @@ extension DashboardView {
             dataService.getReports(limit: 10) { result in
                 DispatchQueue.main.async {
                     self.reports = result
+//                    self.dataSet.append(self.reports)
+//                    self.dataSet = ["Reports": self.reports]
+                    self.dataSet["Reports"] = self.reports
                 }
             }
         }

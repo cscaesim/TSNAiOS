@@ -17,26 +17,27 @@ struct ArticleListView: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     var body: some View {
-        ZStack {
-            VStack {
-                Picker(selection: $selected, label: Text("Toast")) {
-                    Text("News").tag(0)
-                    Text("Blogs").tag(1)
-                    Text("Reports").tag(2)
+        NavigationView {
+            ZStack {
+                VStack {
+                    Picker(selection: $selected, label: Text("Toast")) {
+                        Text("News").tag(0)
+                        Text("Blogs").tag(1)
+                        Text("Reports").tag(2)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                    
+                    TabView(selection: $selected) {
+                        NewsList(isLoading: false, articles: viewModel.articles, blogs: nil, reports: nil).tag(0).redacted(reason: viewModel.isLoading ? .placeholder : [])
+                        NewsList(isLoading: false, articles: nil, blogs: viewModel.blogs, reports: nil).tag(1).redacted(reason: viewModel.isLoading ? .placeholder : [])
+                        NewsList(isLoading: false, articles: nil, blogs: nil, reports: viewModel.reports).tag(2).redacted(reason: viewModel.isLoading ? .placeholder : [])
+                    }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                }.navigationTitle("News List")
+                if (viewModel.isLoading) {
+                    LoadingScreen()
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                
-                TabView(selection: $selected) {
-                    NewsList(articles: viewModel.articles, blogs: nil, reports: nil).tag(0)
-                    NewsList(articles: nil, blogs: viewModel.blogs, reports: nil).tag(1)
-                    NewsList(articles: nil, blogs: nil, reports: viewModel.reports).tag(2)
-                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
-            if (viewModel.isLoading) {
-                LoadingScreen()
-            }
-            
         }
     }
 }
@@ -49,8 +50,8 @@ extension ArticleListView {
         @Published var isLoading = false
         @Published var featuredArticle: Article!
         @Published var articles = [Article]()
-        @Published var blogs = [Blog]()
-        @Published var reports = [Report]()
+        @Published var blogs = [Article]()
+        @Published var reports = [Article]()
         
         @State var selectedOption = 0
         
@@ -64,7 +65,7 @@ extension ArticleListView {
             getArticles()
             getBlogs()
             getReports()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.isLoading = false
             }
         }

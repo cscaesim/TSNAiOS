@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReportsCell: View {
-    var report: Blog
+    var report: Article
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,14 +16,14 @@ struct ReportsCell: View {
                 .cornerRadius(5)
             Text(report.title)
                 .font(.caption)
-                .frame(width: 155)
+                .frame(width: 120)
         }
         .padding(.leading)
     }
 }
 
 struct BlogRow: View {
-    var blogs: [Blog]
+    var blogs: [Article]
     var body: some View {
         VStack(alignment: .leading) {
             Text("Blogs")

@@ -17,7 +17,8 @@ struct ArticleCell: View {
                 .aspectRatio(contentMode: .fit)
             Text(article.title)
                 .font(.caption)
-                .frame(width: 155)
+                .frame(width: 120)
+                .lineLimit(2)
         }
         .padding(.leading)
     }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ArticleRow: View {
     var articles: [Article]
+    var title: String
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Articles")
+            Text("\(title)")
                 .font(.headline)
             
             ScrollView(.horizontal, showsIndicators: false, content: {
@@ -31,11 +33,5 @@ struct ArticleRow: View {
                 }
             })
         }
-    }
-}
-
-struct ArticleRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ArticleRow(articles: [Article(events: [], featured: false, id: 1, imageUrl: "", launches: [], newsSite: "cnn.com", publishedAt: "2017-08-1", summary: "The monsters are out to get us", title: "Monsters are coming", updatedAt: "", url: "")])
     }
 }

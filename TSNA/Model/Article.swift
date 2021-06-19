@@ -7,11 +7,11 @@
 
 import Foundation
 struct Article: Codable, Hashable {
-    var events: [String]
-    var featured: Bool
+//    var events: [String]
+//    var featured: Bool
     var id: Int
     var imageUrl: String
-    var launches: [Dictionary<String, String>]
+//    var launches: [Dictionary<String, String>]
     var newsSite: String
     var publishedAt: String
     var summary: String

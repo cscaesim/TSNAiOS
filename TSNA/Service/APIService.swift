@@ -9,11 +9,12 @@ import Foundation
 
 protocol NetworkService {
     func getNewsAPICall(limit: Int, completion: @escaping ([Article]) -> Void)
-    func getBlogsAPICall(limit: Int, completion: @escaping ([Blog]) -> Void)
-    func getReportsAPICall(limit: Int, completion: @escaping ([Report]) -> Void)
+    func getBlogsAPICall(limit: Int, completion: @escaping ([Article]) -> Void)
+    func getReportsAPICall(limit: Int, completion: @escaping ([Article]) -> Void)
 }
 
 class APIService: NetworkService {
+    
     let url = "https://api.spaceflightnewsapi.net/v3/"
     
     func getNewsAPICall(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
@@ -49,7 +50,7 @@ class APIService: NetworkService {
     }
     
     
-    func getBlogsAPICall(limit: Int = 0, completion: @escaping ([Blog]) -> Void) {
+    func getBlogsAPICall(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
         var url = "\(url)blogs"
         
         if limit != 0 {
@@ -72,7 +73,7 @@ class APIService: NetworkService {
                 do {
                     if (data != nil) {
                         print(data!)
-                        let articles = try jsonDecoder.decode([Blog].self, from: data!)
+                        let articles = try jsonDecoder.decode([Article].self, from: data!)
                         completion(articles)
                     }
                 } catch let error {
@@ -82,7 +83,7 @@ class APIService: NetworkService {
         }.resume()
     }
     
-    func getReportsAPICall(limit: Int = 0, completion: @escaping ([Report]) -> Void) {
+    func getReportsAPICall(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
         
         var url = "\(url)reports"
         
@@ -106,7 +107,7 @@ class APIService: NetworkService {
                 do {
                     if (data != nil) {
                         print(data!)
-                        let articles = try jsonDecoder.decode([Report].self, from: data!)
+                        let articles = try jsonDecoder.decode([Article].self, from: data!)
                         completion(articles)
                     }
                 } catch let error {

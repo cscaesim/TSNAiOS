@@ -11,8 +11,8 @@ import Foundation
 protocol DataService {
 //    func getNews(completion: @escaping ([Article]) -> Void)
     func getNews(limit: Int, completion: @escaping ([Article]) -> Void)
-    func getBlogs(limit: Int, completion: @escaping ([Blog]) -> Void)
-    func getReports(limit: Int, completion: @escaping ([Report]) -> Void)
+    func getBlogs(limit: Int, completion: @escaping ([Article]) -> Void)
+    func getReports(limit: Int, completion: @escaping ([Article]) -> Void)
 }
 
 class AppService: DataService {
@@ -29,13 +29,13 @@ class AppService: DataService {
         }
     }
     
-    func getBlogs(limit: Int = 0, completion: @escaping ([Blog]) -> Void) {
-        apiService.getBlogsAPICall(limit: limit) { (blogs) in
-            completion(blogs)
+    func getBlogs(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
+        apiService.getBlogsAPICall(limit: limit) { (articles) in
+            completion(articles)
         }
     }
     
-    func getReports(limit: Int = 0, completion: @escaping ([Report]) -> Void) {
+    func getReports(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
         apiService.getReportsAPICall(limit: limit) { (reports) in
             completion(reports)
         }
