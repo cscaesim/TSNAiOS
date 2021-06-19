@@ -12,8 +12,9 @@ struct ArticleCell: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            URLImage(article.imageUrl).frame(width: 155, height: 155)
-                .cornerRadius(5)
+            URLImage(article.imageUrl).frame(width: 120, height: 120)
+                .cornerRadius(60)
+                .aspectRatio(contentMode: .fit)
             Text(article.title)
                 .font(.caption)
                 .frame(width: 155)

@@ -12,7 +12,7 @@ struct ReportCell: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            URLImage(report.imageUrl).frame(width: 155, height: 155)
+            URLImage(report.imageUrl).frame(width: 120, height: 120)
                 .cornerRadius(5)
             Text(report.title)
                 .font(.caption)
@@ -32,7 +32,12 @@ struct ReportRow: View {
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(reports, id: \.self) { report in
-                        ReportCell(report: report)
+                        NavigationLink(
+                            destination: DetailView(title: report.title, summary: report.summary, image: report.imageUrl, url: report.url, site: report.newsSite, publishedTime: report.publishedAt),
+                            label: {
+                                ReportCell(report: report)
+                                
+                            }).buttonStyle(PlainButtonStyle())
                     }
                 }
             })

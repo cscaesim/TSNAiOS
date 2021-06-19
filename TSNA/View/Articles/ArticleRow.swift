@@ -26,11 +26,10 @@ struct ArticleRow: View {
                                                     publishedTime: article.publishedAt),
                             label: {
                                 ArticleCell(article: article)
-                            })
+                            }).buttonStyle(PlainButtonStyle())
                     }
                 }
             })
-           
         }
     }
 }

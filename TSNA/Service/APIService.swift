@@ -8,15 +8,24 @@
 import Foundation
 
 protocol NetworkService {
-    func getNewsAPICall(completion: @escaping ([Article]) -> Void)
-    func getBlogsAPICall(completion: @escaping ([Blog]) -> Void)
+    func getNewsAPICall(limit: Int, completion: @escaping ([Article]) -> Void)
+    func getBlogsAPICall(limit: Int, completion: @escaping ([Blog]) -> Void)
+    func getReportsAPICall(limit: Int, completion: @escaping ([Report]) -> Void)
 }
 
 class APIService: NetworkService {
     let url = "https://api.spaceflightnewsapi.net/v3/"
     
-    func getNewsAPICall(completion: @escaping ([Article]) -> Void) {
-        let url = "\(url)articles"
+    func getNewsAPICall(limit: Int = 0, completion: @escaping ([Article]) -> Void) {
+        var url = "\(url)"
+        if limit != 0 {
+             url = "\(url)articles?_limit=\(limit)"
+        } else {
+            url = "\(url)articles"
+        }
+        
+        print(url)
+        
         let jsonDecoder = JSONDecoder()
         
         let request = URLRequest(url: URL(string: url)!)
@@ -40,8 +49,17 @@ class APIService: NetworkService {
     }
     
     
-    func getBlogsAPICall(completion: @escaping ([Blog]) -> Void) {
-        let url = "\(url)blogs"
+    func getBlogsAPICall(limit: Int = 0, completion: @escaping ([Blog]) -> Void) {
+        var url = "\(url)blogs"
+        
+        if limit != 0 {
+             url = "\(url)?_limit=\(limit)"
+        } else {
+            url = "\(url)"
+        }
+        
+        print(url)
+        
         let jsonDecoder = JSONDecoder()
         
         let request = URLRequest(url: URL(string: url)!)
@@ -64,8 +82,18 @@ class APIService: NetworkService {
         }.resume()
     }
     
-    func getReportsAPICall(completion: @escaping ([Report]) -> Void) {
-        let url = "\(url)reports"
+    func getReportsAPICall(limit: Int = 0, completion: @escaping ([Report]) -> Void) {
+        
+        var url = "\(url)reports"
+        
+        if limit != 0 {
+             url = "\(url)?_limit=\(limit)"
+        } else {
+            url = "\(url)"
+        }
+        
+        print(url)
+        
         let jsonDecoder = JSONDecoder()
         
         let request = URLRequest(url: URL(string: url)!)

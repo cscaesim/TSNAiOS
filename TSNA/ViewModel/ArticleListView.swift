@@ -7,9 +7,91 @@
 
 import SwiftUI
 
+
+
 struct ArticleListView: View {
+    @StateObject var viewModel: ViewModel
+    @State private var selected = 0
+    
+    init(viewModel: ViewModel = .init()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                Picker(selection: $selected, label: Text("Toast")) {
+                    Text("News").tag(0)
+                    Text("Blogs").tag(1)
+                    Text("Reports").tag(2)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                
+                TabView(selection: $selected) {
+                    NewsList(articles: viewModel.articles, blogs: nil, reports: nil).tag(0)
+                    NewsList(articles: nil, blogs: viewModel.blogs, reports: nil).tag(1)
+                    NewsList(articles: nil, blogs: nil, reports: viewModel.reports).tag(2)
+                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            }
+            if (viewModel.isLoading) {
+                LoadingScreen()
+            }
+            
+        }
+    }
+}
+
+extension ArticleListView {
+    class ViewModel: ObservableObject {
+        
+        let dataService: DataService
+        
+        @Published var isLoading = false
+        @Published var featuredArticle: Article!
+        @Published var articles = [Article]()
+        @Published var blogs = [Blog]()
+        @Published var reports = [Report]()
+        
+        @State var selectedOption = 0
+        
+        init(dataService: DataService = AppService()) {
+            self.dataService = dataService
+            getData()
+        }
+        
+        func getData() {
+            isLoading = true
+            getArticles()
+            getBlogs()
+            getReports()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.isLoading = false
+            }
+        }
+        
+        func getArticles() {
+            dataService.getNews(limit: 30) { result in
+                DispatchQueue.main.async {
+                    self.articles = result
+                }
+            }
+        }
+        
+        func getBlogs() {
+            dataService.getBlogs(limit: 30) { result in
+                DispatchQueue.main.async {
+                    self.blogs = result
+                }
+            }
+        }
+        
+        func getReports() {
+            dataService.getReports(limit: 30) { result in
+                DispatchQueue.main.async {
+                    self.reports = result
+                }
+            }
+        }
     }
 }
 

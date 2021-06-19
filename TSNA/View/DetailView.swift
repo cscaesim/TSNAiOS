@@ -39,15 +39,11 @@ struct DetailView: View {
                 Divider()
                 Text("Summary:")
                 Text(summary).lineLimit(.none)
-//                Button("Read More") {
-//
-//                }
                 NavigationLink(
                     destination: WebView(url: URL(string: url)),
                     label: {
                         Text("Read More")
                     })
-                .padding(.top)
             }
             .padding()
         }
