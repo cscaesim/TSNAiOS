@@ -13,7 +13,7 @@ struct ArticleCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             URLImage(article.imageUrl).frame(width: 120, height: 120)
-                .cornerRadius(60)
+                .cornerRadius(5)
                 .aspectRatio(contentMode: .fit)
             Text(article.title)
                 .font(.caption)
@@ -23,9 +23,3 @@ struct ArticleCell: View {
         .padding(.leading)
     }
 }
-
-//struct CategoryCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryCell()
-//    }
-//}
