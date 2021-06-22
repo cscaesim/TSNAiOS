@@ -19,12 +19,6 @@ struct DashboardView: View {
         NavigationView {
             ZStack {
                 Color(.systemBackground)
-//                VStack {
-//                    ArticleRow(articles: viewModel.articles)
-//                    BlogRow(blogs: viewModel.blogs)
-//                    ReportRow(reports: viewModel.reports)
-//                }
-                
                 List {
                     ForEach(viewModel.dataSet.keys.sorted(), id: \.self) { key in
                         ArticleRow(articles: viewModel.dataSet[key]!, title: key)
